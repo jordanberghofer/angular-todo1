@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+   <div ng-app="TodoApp">
+        <div ng-include="'partials/navbar.html'"></div>
+        <div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 main-container">
+                    <!-- where the magic happens -->
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    <!-- end ng-app -->
+    </div> 
+
+    <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+
+    <!-- app -->
+    <script src="app/app.js"></script>
+    <script src="app/values/fb-creds.js"></script>
+
+    <!-- factories -->
+    <script src="app/factories/factory-filter.js"></script>
+    <script src="app/factories/factory-todo.js"></script>
+    <script src="app/factories/factory-user.js"></script>
+    
+    <!-- controllers -->
+    <script src="app/controllers/control-add-task.js"></script>
+    <script src="app/controllers/control-detail-task.js"></script>
+    <script src="app/controllers/control-edit-task.js"></script>
+    <script src="app/controllers/control-list.js"></script>
+    <script src="app/controllers/control-navbar.js"></script>
+    <script src="app/controllers/control-user.js"></script>
+
+
+
+</body>
+</html>

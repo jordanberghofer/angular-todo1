@@ -1,0 +1,16 @@
+<h2>Task Details</h2>
+<div class="col-xs-12">
+
+    <h3>{{task.task}}</h3>
+
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Assigned To: </strong>{{task.assignedTo}}</li>
+        <li class="list-group-item"><strong>Due Date: </strong>{{task.dueDate}}</li>
+        <li class="list-group-item"><strong>Dependencies: </strong>{{task.dependencies}}</li>
+        <li class="list-group-item"><strong>Location: </strong>{{task.location}}</li>
+        <li class="list-group-item"><strong>Urgency: </strong>{{task.urgency}}</li>
+        <li class="list-group-item"><strong>Completed: </strong>{{task.isCompleted ? "yes" : "no"}}</li>
+    </ul>
+
+    <button class="btn btn-info"><a ng-href="#!/task/{{task.id}}/edit">Edit</a></button>
+</div>
